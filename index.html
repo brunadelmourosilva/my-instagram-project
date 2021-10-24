@@ -54,7 +54,7 @@
         <div class="col-12 col-md-8">
           <!--coluna principal 2-->
 
-          <!--parte secundária - seguidores, foto do perfil-->
+          <!--parte secundária - seguidores, foto do perfil e destaques-->
           <div class="container">
             <div class="row" style="padding-top: 20px;">
 
@@ -100,14 +100,66 @@
               </div>
 
               <div class="col-2"> <!--coluna secundária 3 - espaçamento lateral das informações-->
-              </div>
-              
+              </div> 
             </div>
 
-            <div class="col-0 col-md-2"></div> <!--coluna principal 3-->
+            <!--Stories-->
+            <div style="padding-top: 0px;">
+              <div class="row">
+                  <div class="col-2"> <canvas id="cir1"></canvas></div>
+                  <div class="col-2"> <canvas id="cir2"></canvas></div>
+                  <div class="col-2"> <canvas id="cir3"></canvas></div>
+              </div>
+            </div>
+          <div style="padding-bottom: 40px;">
+              <div class="row">
+                  <div class="col-2 stories"> UNIFEI</div>
+                  <div class="col-2 stories"> IF</div>
+                  <div class="col-2 stories"> Fotos</div>
+              </div>
+          </div>
+
+        </div>
+
+
+            <div class="col-0 col-md-2"> <!--coluna principal 3-->
           </div>
   </section>
 
+  <!--script para os destaques em canvas-->
+  <script type="text/javascript">
+
+    var circulo1 = document.getElementById('cir1').getContext('2d');
+
+    circulo1.beginPath();
+    circulo1.arc(60, 100, 40, 0, 2 * Math.PI);
+    circulo1.fillStyle = '#B491E6';
+    circulo1.fill();
+    circulo1.linewidth = 5;
+    circulo1.strokeStyle = '#dbdbdb';
+    circulo1.stroke();
+
+    var circulo2 = document.getElementById('cir2').getContext('2d');
+
+    circulo2.beginPath();
+    circulo2.arc(60, 100, 40, 0, 2 * Math.PI);
+    circulo2.fillStyle = '#7D57B2';
+    circulo2.fill();
+    circulo2.linewidth = 5;
+    circulo2.strokeStyle = '#dbdbdb';
+    circulo2.stroke();
+
+    var circulo3 = document.getElementById('cir3').getContext('2d');
+
+    circulo3.beginPath();
+    circulo3.arc(60, 100, 40, 0, 2 * Math.PI);
+    circulo3.fillStyle = '#5F3797';
+    circulo3.fill();
+    circulo3.linewidth = 5;
+    circulo3.strokeStyle = '#dbdbdb';
+    circulo3.stroke();
+    
+  </script>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
